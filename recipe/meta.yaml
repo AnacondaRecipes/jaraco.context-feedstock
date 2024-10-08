@@ -16,16 +16,21 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
-    - setuptools >=56
-    - setuptools_scm >=3.4.1
+    - setuptools
+    - toml
+    - wheel
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
     - jaraco.context
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/jaraco/jaraco.context
