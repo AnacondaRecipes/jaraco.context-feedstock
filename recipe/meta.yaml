@@ -38,6 +38,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Context managers by jaraco
+  # no description provided
   doc_url: https://jaracocontext.readthedocs.io/
   dev_url: https://github.com/jaraco/jaraco.context
 
