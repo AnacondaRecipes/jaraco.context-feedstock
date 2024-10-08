@@ -23,6 +23,7 @@ requirements:
     - wheel
   run:
     - python
+    - backports.tarfile  # [py<312]
 
 test:
   imports:
