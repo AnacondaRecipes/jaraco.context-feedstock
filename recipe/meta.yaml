@@ -1,16 +1,16 @@
 {% set name = "jaraco.context" %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/jaraco/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2aa8ca1ac7301b9034c17fc7b0b444faea194c4ded2d6909fa9d8fe723aefee4
+  url: https://pypi.org/packages/source/j/jaraco-context/jaraco_context-{{ version }}.tar.gz
+  sha256: 129a341b0a85a7db7879e22acd66902fda67882db771754574338898b2d5d86f
 
 build:
-  skip: True  # [py<38]
+  skip: True  # [py<39]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -18,9 +18,9 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=77
+    - setuptools-scm >=3.4.1
     - toml
-    - wheel
   run:
     - python
     - backports.tarfile  # [py<312]
@@ -40,7 +40,7 @@ about:
   license_file: LICENSE
   summary: Context managers by jaraco
   # no description provided
-  doc_url: https://jaracocontext.readthedocs.io/
+  doc_url: https://jaracocontext.readthedocs.io
   dev_url: https://github.com/jaraco/jaraco.context
 
 extra:
