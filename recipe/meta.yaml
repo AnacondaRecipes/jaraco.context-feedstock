@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/jaraco/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 874699efb4275caa7838efe605c11b88ecd8d55e894fcba8eafd3fd04d3dc387
+  url: https://pypi.org/packages/source/j/jaraco-context/jaraco_context-{{ version }}.tar.gz
+  sha256: 129a341b0a85a7db7879e22acd66902fda67882db771754574338898b2d5d86f
 
 build:
   skip: True  # [py<39]
@@ -36,6 +36,7 @@ about:
   home: https://github.com/jaraco/jaraco.context
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: Context managers by jaraco
   # no description provided
   doc_url: https://jaracocontext.readthedocs.io
