@@ -1,5 +1,5 @@
 {% set name = "jaraco.context" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jaraco-context/jaraco_context-{{ version }}.tar.gz
-  sha256: 129a341b0a85a7db7879e22acd66902fda67882db771754574338898b2d5d86f
+  sha256: f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3
 
 build:
-  skip: True  # [py<39]
+  skip: True  # [py<310]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
