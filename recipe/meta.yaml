@@ -10,7 +10,7 @@ source:
   sha256: f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3
 
 build:
-  skip: true  # [py<310]
+  skip: True  # [py<310]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -21,13 +21,9 @@ requirements:
     - setuptools >=77
     - setuptools-scm >=3.4.1
     - toml
-    - coherent.licensed
   run:
     - python
     - backports.tarfile  # [py<312]
-  run_constrained:
-    - pytest-checkdocs >=2.14
-    - pytest-enabler >=3.4
 
 test:
   imports:
